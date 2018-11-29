@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-cloud-config-client
+endpoints:
+  env:
+    sensitive: false
+
+## 没有办法关闭spring-cloud的bootstrap配置
+## 原因是BootstrapApplicationListener 的优先级高于ConfigFileApplicationListener
+## 需要关闭可以在启动参数加
+#spring:
+#  cloud:
+#    bootstrap:
+#      enabled: false
